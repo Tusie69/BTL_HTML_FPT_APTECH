@@ -164,8 +164,9 @@ button:hover {
     opacity: 0.9;
     transform: translateY(-1px);
 }
-
-
+#result {
+    display: none;
+}
 #result .row {
     border: 1px solid #ddd;
     padding: 10px;
