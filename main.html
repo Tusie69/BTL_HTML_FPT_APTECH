@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký người dùng</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="brand">
+            <img class="logo" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo website">
+            <div class="brand-text">
+                <h1>Website Đăng Ký</h1>
+                <p>Đăng ký nhanh chóng - đơn giản - tiện lợi</p>
+            </div>
+        </div>
+
+        <div class="banner" aria-label="Banner">
+            <img
+                    src="https://aptech.fpt.edu.vn/wp-content/uploads/2023/02/hoc-bong-fpt-aptech-12-nam-den-sach-scaled.jpg"
+                    alt="Banner website"
+            >
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <form id="userForm" novalidate>
+            <h2>Ðăng ký thông tin người dùng</h2>
+            <div class="form-group">
+                <label for="fullname">Họ và tên</label>
+                <input type="text" id="fullname" name="fullname" maxlength="50" autocomplete="name" />
+                <div class="error" id="nameError" aria-live="polite"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" />
+                <div class="error" id="emailError" aria-live="polite"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" inputmode="tel" autocomplete="tel" />
+                <div class="error" id="phoneError" aria-live="polite"></div>
+            </div>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>Giới tính</legend>
+                    <div class="radio-group">
+                        <label class="option" for="genderMale">
+                            <input type="radio" id="genderMale" name="gender" value="Nam">
+                            Nam
+                        </label>
+                        <label class="option" for="genderFemale">
+                            <input type="radio" id="genderFemale" name="gender" value="Nữ">
+                            Nữ
+                        </label>
+                    </div>
+                    <div class="error" id="genderError" aria-live="polite"></div>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>Sở thích (tuỳ chọn)</legend>
+                    <div class="checkbox-group">
+                        <label class="option" for="hSport">
+                            <input type="checkbox" id="hSport" name="hobbies" value="Thể thao">
+                            Thể thao
+                        </label>
+                        <label class="option" for="hMovie">
+                            <input type="checkbox" id="hMovie" name="hobbies" value="Phim ảnh">
+                            Phim ảnh
+                        </label>
+                        <label class="option" for="hBook">
+                            <input type="checkbox" id="hBook" name="hobbies" value="Đọc sách">
+                            Đọc sách
+                        </label>
+                        <label class="option" for="hMusic">
+                            <input type="checkbox" id="hMusic" name="hobbies" value="Âm nhạc">
+                            Âm nhạc
+                        </label>
+                        <label class="option" for="hOther">
+                            <input type="checkbox" id="hOther" name="hobbies" value="Khác">
+                            Khác
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <label for="about">Giới thiệu bản thân (tuỳ chọn)</label>
+                <textarea id="about" name="about" autocomplete="off"></textarea>
+            </div>
+
+            <button type="submit">Đăng ký</button>
+        </form>
+
+        <div id="result">
+            <h2>Thông tin đã đăng ký</h2>
+            <div class="row"><b>Họ tên:</b> <span id="rName"></span></div>
+            <div class="row"><b>Email:</b> <span id="rEmail"></span></div>
+            <div class="row"><b>Phone:</b> <span id="rPhone"></span></div>
+            <div class="row"><b>Giới tính:</b> <span id="rGender"></span></div>
+            <div class="row"><b>Sở thích:</b> <span id="rHobby"></span></div>
+            <div class="row"><b>Giới thiệu:</b> <span id="rAbout"></span></div>
+
+            <div class="row actions">
+                <button type="button" id="btnBack">Quay lại sửa thông tin</button>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>SV: Tường Duy Minh Tú</p>
+    <p>Email: tuongduyminhtu@gmail.com</p>
+    <p>Lớp: T2512e</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
